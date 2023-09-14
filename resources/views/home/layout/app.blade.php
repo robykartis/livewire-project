@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="keywords"
         content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
-    <title>Sandbox - Modern & Multipurpose Bootstrap 5 Template</title>
+    <title>{{ config('app.name') }}</title>
     <link rel="shortcut icon" href="{{ asset('assets/template/home/assets/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/template/home/assets/css/plugins.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/template/home/assets/css/style.css') }}">

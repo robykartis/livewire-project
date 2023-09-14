@@ -2,10 +2,11 @@
     <nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-light caret-none">
         <div class="container flex-lg-row flex-nowrap align-items-center">
             <div class="navbar-brand w-100">
-                <a href="./index.html">
+                {{-- <a href="./index.html">
                     <img src="{{ asset('assets/template/home/assets/img/logo-dark.png') }}"
                         srcset="{{ asset('assets/template/home/assets/img/logo-dark@2x.png') }} 2x" alt="" />
-                </a>
+                </a> --}}
+                <h1>HAhaha</h1>
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div class="offcanvas-header d-lg-none">
