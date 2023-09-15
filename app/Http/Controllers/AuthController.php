@@ -38,9 +38,15 @@ class AuthController extends Controller
         }
         $input = $request->all();
         if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
-            if ($user = Auth::user()) {
+            if (auth()->user()->type == 'su') {
                 toastr()->success('Login successfully!', 'SUCCESS', ['timeOut' => 5000]);
-                return redirect()->route('dashboard');
+                return redirect()->route('su.index');
+            } else if (auth()->user()->type == 'admin') {
+                toastr()->success('Login successfully!', 'SUCCESS', ['timeOut' => 5000]);
+                return redirect()->route('admin.index');
+            } else {
+                toastr()->success('Login successfully!', 'SUCCESS', ['timeOut' => 5000]);
+                return redirect()->route('user.index');
             }
         } else {
             return redirect()->route('auth.login')

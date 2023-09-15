@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +28,10 @@ Route::controller(AuthController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
     Route::post('/register/auth/process', 'process_register')->name('process_register');
     Route::get('/logout/auth/process', 'logout')->name('logout');
+});
+Route::prefix('dashboard')->group(function () {
+    Route::get('/superadmin', [DashboardController::class, 'su'])->name('su.index');
+    Route::prefix('user')->group(function () {
+        Route::get('/', [UserController::class, 'index'])->name('user.index');
+    });
 });
