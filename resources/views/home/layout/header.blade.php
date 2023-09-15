@@ -10,7 +10,7 @@
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div class="offcanvas-header d-lg-none">
-                    <h3 class="text-white fs-30 mb-0">Sandbox</h3>
+                    <h3 class="text-white fs-30 mb-0">Hahah</h3>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -308,10 +308,12 @@
                             @auth
                                 <a class="nav-link " href="#">Dashboard</a>
                             @else
-                                <a class="nav-link " href="#">Login</a>
-                                @if (Route::has('register'))
-                                    <a class="nav-link " href="#">Register</a>
-                                @endif
+                                <div class="d-flex">
+                                    <a class="nav-link p-2" href="{{ route('login') }}">Login</a>
+                                    @if (Route::has('register'))
+                                        <a class="nav-link p-2" href="{{ route('register') }}">Register</a>
+                                    @endif
+                                </div>
                             @endauth
                         </li>
                     @endif

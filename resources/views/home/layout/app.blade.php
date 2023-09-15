@@ -9,13 +9,15 @@
     <meta name="keywords"
         content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template">
     <meta name="author" content="elemis">
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} | @yield('title')</title>
     <link rel="shortcut icon" href="{{ asset('assets/template/home/assets/img/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/template/home/assets/css/plugins.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/template/home/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/template/home/assets/css/colors/grape.css') }}">
     <link rel="preload" href="{{ asset('assets/template/home/assets/css/fonts/space.css') }}" as="style"
         onload="this.rel='stylesheet'">
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>

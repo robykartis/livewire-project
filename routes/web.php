@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::controller(AuthController::class)->group(function () {
+    Route::get('/login', 'login')->name('login');
+    Route::post('/login/auth/process', 'process_login')->name('process_login');
+    Route::get('/register', 'register')->name('register');
+    Route::post('/register/auth/process', 'process_register')->name('process_register');
+    Route::get('/logout/auth/process', 'logout')->name('logout');
+});
