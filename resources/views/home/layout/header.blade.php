@@ -6,11 +6,11 @@
                     <img src="{{ asset('assets/template/home/assets/img/logo-dark.png') }}"
                         srcset="{{ asset('assets/template/home/assets/img/logo-dark@2x.png') }} 2x" alt="" />
                 </a> --}}
-                <h1>HAhaha</h1>
+                <h1>Roby</h1>
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
                 <div class="offcanvas-header d-lg-none">
-                    <h3 class="text-white fs-30 mb-0">Hahah</h3>
+                    <h3 class="text-white fs-30 mb-0">Roby</h3>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>

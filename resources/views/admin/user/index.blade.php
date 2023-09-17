@@ -10,7 +10,12 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title mb-4">{{ $title }}</h4>
+                    <h4 class="header-title">{{ $title }}
+                        {{-- <a href="{{ route('user.create') }}" class="btn btn-primary float-end">add</a> --}}
+                    </h4>
+                    <div class="d-flex justify-content-end align-items-center gap-2">
+                        <a href="{{ route('user.create') }}" class="btn btn-primary justify-content-end">add</a>
+                    </div>
                     @livewire('user.index')
                 </div>
             </div>

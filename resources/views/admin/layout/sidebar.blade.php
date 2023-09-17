@@ -27,8 +27,8 @@
 
             <li class="side-nav-title">Main</li>
 
-            <li class="side-nav-item @if (request()->routeIs(['su.index'])) menuitem-active @endif">
-                <a href="index.html" class="side-nav-link">
+            <li class="side-nav-item @if (request()->routeIs([Auth::user()->type . '.index'])) menuitem-active @endif">
+                <a href="{{ route(Auth::user()->type . '.index') }}" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span> Dashboard </span>
                 </a>
@@ -36,7 +36,7 @@
 
             <li class="side-nav-title">Setting</li>
 
-            <li class="side-nav-item @if (request()->routeIs(['user.index'])) menuitem-active @endif">
+            <li class="side-nav-item @if (request()->routeIs(['user.index', 'user.create'])) menuitem-active @endif">
                 <a href="{{ route('user.index') }}" class="side-nav-link">
                     <i class="ri-dashboard-3-line"></i>
                     <span> User </span>

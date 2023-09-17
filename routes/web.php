@@ -33,5 +33,6 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/superadmin', [DashboardController::class, 'su'])->name('su.index');
     Route::prefix('user')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('user.index');
+        Route::get('/create', [UserController::class, 'create'])->name('user.create');
     });
 });
